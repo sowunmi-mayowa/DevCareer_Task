@@ -1,0 +1,13 @@
+body{
+    background-image: linear-gradient(30deg, blue, dodgerblue);
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+}
+.container{
+    height: 480px;
+    margin: 70px auto;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 20px;
+}
