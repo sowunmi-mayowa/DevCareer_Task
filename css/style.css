@@ -13,6 +13,6 @@ body{
 }
 @media(max-width:425px){
     .container{
-        height: 600px;
+        height: 620px;
     }
 }
