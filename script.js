@@ -46,6 +46,18 @@ function formValidation(e){
         parentMsg.appendChild(msgElem)
         setTimeout(() => msgElem.remove(), 5000)
     }
+    else if(password.maxLength < 8 && confirmPassword.maxLength
+         < 8){
+        let msgElem = document.createElement("div");
+        msgElem.textContent = "passwords should contain more than 8 character";
+        msgElem.classList.add("alert-danger", "form-control");
+        inputField[3].classList.add("border-danger");
+        inputField[4].classList.add("border-danger");
+        parentMsg.appendChild(msgElem);
+        setTimeout(() => msgElem.remove(), 3000);
+        setTimeout(() => inputField[3].classList.remove("border-danger"), 3000);
+        setTimeout(() => inputField[4].classList.remove("border-danger"), 3000);
+    }
     else{
         let msgElem = document.createElement("div");
         msgElem.textContent = "Your Account Has Been Created Successfully...";
