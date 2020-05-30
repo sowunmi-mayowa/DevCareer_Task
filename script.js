@@ -41,7 +41,7 @@ function formValidation(e){
     }
     else if(password.value !== confirmPassword.value){
         let msgElem = document.createElement("div");
-        msgElem.textContent = "Password Mismatch ..... Try Again!";
+        msgElem.textContent = "Password Mismatch.. Try Again!";
         msgElem.classList.add("alert-warning", "form-control");
         parentMsg.appendChild(msgElem)
         setTimeout(() => msgElem.remove(), 5000)
@@ -52,5 +52,17 @@ function formValidation(e){
         msgElem.classList.add("alert-success", "form-control");
         parentMsg.appendChild(msgElem)
         setTimeout(() => msgElem.remove(), 5000)
+        inputField[0].classList.add("border-success");
+        inputField[1].classList.add("border-success");
+        inputField[2].classList.add("border-success");
+        inputField[3].classList.add("border-success");
+        inputField[4].classList.add("border-success");
+        parentMsg.appendChild(msgElem);
+        setTimeout(() => msgElem.remove(), 3000);
+        setTimeout(() => inputField[0].classList.remove("border-success"), 3000);
+        setTimeout(() => inputField[1].classList.remove("border-success"), 3000);
+        setTimeout(() => inputField[2].classList.remove("border-success"), 3000);
+        setTimeout(() => inputField[3].classList.remove("border-success"), 3000);
+        setTimeout(() => inputField[4].classList.remove("border-success"), 3000);
     }
 }
