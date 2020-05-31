@@ -57,6 +57,15 @@ function formValidation(e){
         setTimeout(() => inputField[3].classList.remove("border-danger"), 3000);
         setTimeout(() => inputField[4].classList.remove("border-danger"), 3000);
     }
+    else if(email.checkValidity() === false){
+        let msgElem = document.createElement("div");
+        msgElem.textContent = "The email entered is not valid";
+        msgElem.classList.add("alert-danger", "text-center");
+        inputField[2].classList.add("border-danger");
+        parentMsg.appendChild(msgElem);
+        setTimeout(() => msgElem.remove(), 3000);
+        setTimeout(() => inputField[2].classList.remove("border-danger"), 3000);
+    }
     else{
         let msgElem = document.createElement("div");
         msgElem.textContent = "Your Account Has Been Created Successfully...";
